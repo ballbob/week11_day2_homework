@@ -37,5 +37,7 @@ MapWrapper.prototype = {
     google.maps.event.addListener(this.googleMap,'click',function(event){
       console.log(event)
     })
-  }
+  },
+
+
 }
