@@ -1,9 +1,9 @@
 var initialise = function(){
-  var center = {lat: 33, lng: 34}
+  var center = {lat: 42.331427, lng: -83.045754}
   var container = document.querySelector('#main-map')
   var mainMap = new MapWrapper(container,center,10)
-  mainMap.addMarker(center)
   mainMap.addClickEvent()
+  mainMap.addDetroitMarkerAndWindow()
 }
 
 window.onload = initialise
