@@ -4,6 +4,10 @@ var initialise = function(){
   var mainMap = new MapWrapper(container,center,10)
   mainMap.addClickEvent()
   mainMap.addDetroitMarkerAndWindow()
+  mainMap.addPittsMarkerAndWindow()
+   
+  var button = document.querySelector('button')
+  button.onClick = mainMap.handleButtonClick()
 }
 
 window.onload = initialise

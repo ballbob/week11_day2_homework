@@ -33,11 +33,34 @@ MapWrapper.prototype = {
       })
   },
 
+  addPittsMarkerAndWindow: function(){
+    var pittPos = {lat: 40.440625, lng: -79.995886}
+    
+    var pittMarker = new google.maps.Marker({position: pittPos,map: this.googleMap})
+
+    var windowContents = 
+    '<div id="infowindow">'+
+    '<h2>Pittsburgh</h2>'+
+    '<p>Pittsburgh was the site of many inventions: besides its great steel industry, the Big Mac, the first polio vaccine, the smiiley face emoticon and the game of Bingo were invented here. Apparently.</p>'+
+    '<p>Source: http://www.onlyinyourstate.com/pennsylvania/pittsburgh/fun-facts-pittsburgh/</p>'
+
+    var pittWindow = new google.maps.InfoWindow({
+      content:windowContents
+    })
+
+    pittMarker.addListener('click',function(){
+      pittWindow.open(this.googleMap,detroitMarker)
+      })
+  },
+
   addClickEvent: function(){
     google.maps.event.addListener(this.googleMap,'click',function(event){
       console.log(event)
     })
   },
 
+  handleButtonClick: function(){
+
+  }
 
 }
