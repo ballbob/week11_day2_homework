@@ -49,7 +49,7 @@ MapWrapper.prototype = {
     })
 
     pittMarker.addListener('click',function(){
-      pittWindow.open(this.googleMap,detroitMarker)
+      pittWindow.open(this.googleMap,pittMarker)
       })
   },
 
