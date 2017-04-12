@@ -34,7 +34,7 @@ MapWrapper.prototype = {
   },
 
   addPittsMarkerAndWindow: function(){
-    var pittPos = {lat: 40.440625, lng: -79.995886}
+    pittPos = {lat: 40.440625, lng: -79.995886}
     
     var pittMarker = new google.maps.Marker({position: pittPos,map: this.googleMap})
 
@@ -60,7 +60,7 @@ MapWrapper.prototype = {
   },
 
   handleButtonClick: function(){
-
+    this.googleMap.setCenter({lat: 40.440625, lng:-79.995886})
   }
 
 }
