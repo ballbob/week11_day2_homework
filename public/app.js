@@ -5,9 +5,9 @@ var initialise = function(){
   mainMap.addClickEvent()
   mainMap.addDetroitMarkerAndWindow()
   mainMap.addPittsMarkerAndWindow()
-   
+
   var button = document.querySelector('button')
-  button.onClick = mainMap.handleButtonClick()
+  button.onclick = mainMap.handleButtonClick.bind(mainMap)
 }
 
 window.onload = initialise
